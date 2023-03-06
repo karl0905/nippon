@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ordrebekræftelse på din ordre, forekommer efter betaling">
+    <meta name="keywords" content="bekræftelse, ordrebekræftelse, køb, færdig">
+    <title>Ordrebekræftelse | Nippon</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+    <header class="navigation__container">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Nippon logo"></a>
+        <nav>
+            <!-- Menu items og dropdown hover fra w3schools-->
+            <div class="menuitems__container">
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="maaltidskasser.html">Måltidskasser</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="denstudievenlige.html">Den studievenlige</a>
+                            <a href="under_konstruktion.html">Den vegetariske</a>
+                            <a href="under_konstruktion.html">Den veganske</a>
+                            <a href="under_konstruktion.html">Den sunde</a>
+                            <a href="under_konstruktion.html">Den luksus</a>
+                            <a href="under_konstruktion.html">Den børnevenlige</a>
+                            <a href="skraeddersy.html">Skræddersy din egen måltidskasse</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Inspiration</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Spar tid og penge med en madplan</a>
+                            <a href="under_konstruktion.html">Nem aftensmad</a>
+                            <a href="under_konstruktion.html">Sund aftensmad</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Informationer</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Sådan fungerer det</a>
+                            <a href="under_konstruktion.html">Ingredienser</a>
+                            <a href="under_konstruktion.html">Leveringsområde</a>
+                            <a href="under_konstruktion.html">Bæredygtighed</a>
+                            <a href="under_konstruktion.html">Abonnementsordning</a>
+                            <a href="under_konstruktion.html">Leverandører</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Om os</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Vores asiatiske køkken</a>
+                            <a href="under_konstruktion.html">Kontakt os</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="user_cart">
+            <a href="log-in.html"><img class="user" src="img/user.svg" alt="user logo for login"></a>
+            <img class="cart" src="img/cart.svg" alt="cart logo for login">
+        </div>
+    </header>
+
+    <!-- POPUP KURV -->
+    <div id="popup_kurv">
+        <p>Din vare er blevet tilføjet til kurven:</p>
+        <div>
+            <span class="kryds" onclick="hide()">X</span>
+        </div>
+
+        <p>1x skræddersy måltidskasse</p>
+        <p class="kurv_indskudt">1x Sukiyaki <br> 1x Nudler <br> 1x Soba <br> <br> I alt: <span
+                class="pris">393,-</span></p>
+        <div class="knapper">
+            <button id="button_pop_sort" onclick="window.location.href='index.html'">Shop videre</button>
+            <button id="button_pop" type="submit" onclick="window.location.href='registrering.html'">Til kassen</button>
+        </div>
+    </div>
+    <!-- POPUP KURV SLUT -->
+
+    <!-- INDHOLD -->
+    <div class="bredcrumb">
+        <p>Registering</p>
+        <i class="material-icons">arrow_right_alt</i>
+        <p>Betalingsinfo</p>
+        <i class="material-icons">arrow_right_alt</i>
+        <p> <span class="bredcrumb_farve"> Ordrebekræftelse </span> </p>
+    </div>
+
+    <img class="flowet" src="img/progress_bar3.png" alt="processbar for flowet">
+    <div class="johan99">
+        <h1 class="h1">Ordrebekræftelse</h1>
+        <div class="bekraeftelse">
+            <h2 class="h2"> Din ordre er bekræftet</h2>
+            <i class="material-icons material-icons_check" >check_circle</i>
+        </div>
+        <p class="h2"> Vi klargøre din ordre straks og du vil modtage en bekræftelse på johan99@gmail.com</p>
+
+        <p class="ordre_nummer">Ordre nummer: 086743593210</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer_info">
+            <h4>Adresse</h4>
+            <p>Nipponvej 67</p>
+            <p>8000 Aarhus</p>
+        </div>
+
+        <div class="footer_info">
+            <h4>Kundeservice</h4>
+            <p>+45 73841625</p>
+            <p> Nippon@maaltidskasser.dk</p>
+        </div>
+        <div class="footer_info">
+            <h4>Om virksomheden</h4>
+            <p class="link">Bæredygtighed</p>
+            <p class="link">Nippon Group</p>
+        </div>
+        <div class="some">
+            <a href="https://facebook.com"><img src="img/facebook_logo.png" alt="Facebook logo"></a>
+            <a href="https://instagram.com"><img src="img/instagram_logo.png" alt="Instagram logo"></a>
+        </div>
+    </footer>
+</body>

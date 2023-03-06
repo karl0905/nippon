@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Indtastning af betalingsoplysninger i forbindelse med betaling">
+    <meta name="keywords" content="Betaling, info, VISA, mobilepay, applepay">
+    <title>Betalingsinfo | Nippon</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navigation__container">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Nippon logo"></a>
+        <nav>
+            <!-- Menu items og dropdown hover fra w3schools-->
+            <div class="menuitems__container">
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="maaltidskasser.html">Måltidskasser</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="denstudievenlige.html">Den studievenlige</a>
+                            <a href="under_konstruktion.html">Den vegetariske</a>
+                            <a href="under_konstruktion.html">Den veganske</a>
+                            <a href="under_konstruktion.html">Den sunde</a>
+                            <a href="under_konstruktion.html">Den luksus</a>
+                            <a href="under_konstruktion.html">Den børnevenlige</a>
+                            <a href="skraeddersy.html">Skræddersy din egen måltidskasse</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="#">Inspiration</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Spar tid og penge med en madplan</a>
+                            <a href="under_konstruktion.html">Nem aftensmad</a>
+                            <a href="under_konstruktion.html">Sund aftensmad</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="#">Informationer</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Sådan fungerer det</a>
+                            <a href="under_konstruktion.html">Ingredienser</a>
+                            <a href="under_konstruktion.html">Leveringsområde</a>
+                            <a href="under_konstruktion.html">Bæredygtighed</a>
+                            <a href="under_konstruktion.html">Abonnementsordning</a>
+                            <a href="under_konstruktion.html">Leverandører</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="#">Om os</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Vores asiatiske køkken</a>
+                            <a href="under_konstruktion.html">Kontakt os</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="user_cart">
+            <a href="log-in.html"><img class="user" src="img/user.svg" alt="user logo for login"></a>
+            <img class="cart" src="img/cart.svg" alt="cart logo for login"  onclick="show()">
+        </div>
+    </header>
+
+    <!-- POPUP KURV -->
+    <div id="popup_kurv">
+        <p>Din vare er blevet tilføjet til kurven:</p>
+        <div>
+            <span class="kryds" onclick="hide()">X</span>
+        </div>
+
+        <p>1x skræddersy måltidskasse</p>
+        <p class="kurv_indskudt">1x Sukiyaki <br> 1x Nudler <br> 1x Soba <br> <br> I alt: <span
+                class="pris">393,-</span></p>
+        <div class="knapper">
+            <button id="button_pop_sort" onclick="window.location.href='index.html'">Shop videre</button>
+            <button id="button_pop" type="submit" onclick="window.location.href='registrering.html'">Til kassen</button>
+        </div>
+    </div>
+    <!-- POPUP KURV SLUT -->
+
+    <!-- BREDCRUMB -->
+    <div class="bredcrumb">
+        <p>Registering</p>
+        <i class="material-icons">arrow_right_alt</i>
+        <p class="bredcrumb_farve"> Betalingsinfo </p>
+        <i class="material-icons">arrow_right_alt</i>
+        <p> Ordrebekræftelse </p>
+    </div>
+
+    <img class="flowet" src="img/progress_bar2.png" alt="processbar for flowet">
+
+    <!-- KORT OPLYSNINGER -->
+    <div class="betalings_side">
+        <div class="betalings_oplysninger">
+            <div class="betaling_venstre">
+                <div class="betaling">
+                    <label for="kortnummer">Kortnummer</label>
+                    <input id="kortnummer" class="text_1" type="text">
+                    <i class="material-icons">credit_card</i>
+                </div>
+                <div  class="oplysninger_1">
+                <div class="oplysninger">
+                    <label for="udløbsdato">Udløbsdato</label>
+                    <input id="udløbsdato" class="text_2" type="text">
+                    <input id="udløbsdato" class="text_2" type="text">
+                </div>
+                <div>
+                    <label for="cvvcvd">CVV/CVD</label>
+                    <input id="cvvcvd" class="text_3" type="text">
+                </div>
+            </div>
+            </div>
+            <div class="alle_billeder">
+                <div class="to_billeder">
+                    <img class="betaling_billeder" src="img/visa.svg" alt="billede af visa">
+                    <img class="betaling_billeder" src="img/mastercard.svg" alt="billede af mastercard">
+                </div>
+                <p class="b_text">Eller vælg en anden betalingsmetode</p>
+                <div class="tre_billeder">
+                    <img class="betaling_billeder" src="img/paypal.svg" alt="billede af paypal">
+                    <img class="betaling_billeder" src="img/mobilepay.png" alt="billede af mobilepay">
+                    <img class="betaling_billeder" src="img/applepay.svg" alt="billede af applepay">
+                </div>
+            </div>
+        </div>
+
+        <!-- KURVEN -->
+        <section class="kurven">
+            <h1 class="kurv_overskrift">Kurv:</h1>
+            <br>
+            <br>
+            <p class="retterne">Pho ga</p>
+            <p class="prisen">59,00 kr.</p>
+            <br>
+            <p class="retterne">Astiatisk wok med kylling og grøntsager.</p>
+            <p class="prisen">59,00 kr.</p>
+            <br>
+            <p class="retterne"> Asiatisk nudelsalat med kylling og grøntsger</p>
+            <p class="prisen">69,00 kr.</p>
+            <br>
+            <p class="i_alt">I alt 187,00 kr.</p>
+        </section>
+    </div>
+
+    <!-- KNAPPER -->
+    <div>
+    <button type="button" onclick="window.location.href='index.html'" class="annul_betaling">Annuller betaling</button>
+    <button type="button" onclick="window.location.href='ordrebekraeftelse.html'" class="bestil_knap">Bekræft køb</button>
+</div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer_info">
+            <h4>Adresse</h4>
+            <p>Nipponvej 67</p>
+            <p>8000 Aarhus</p>
+        </div>
+
+        <div class="footer_info">
+            <h4>Kundeservice</h4>
+            <p>+45 73841625</p>
+            <p> Nippon@maaltidskasser.dk</p>
+        </div>
+        <div class="footer_info">
+            <h4>Om virksomheden</h4>
+            <p class="link">Bæredygtighed</p>
+            <p class="link">Nippon Group</p>
+        </div>
+        <div class="some">
+            <a href="https://facebook.com"><img src="img/facebook_logo.png" alt="Facebook logo"></a>
+            <a href="https://instagram.com"><img src="img/instagram_logo.png" alt="Instagram logo"></a>
+        </div>
+    </footer>
+
+</body>

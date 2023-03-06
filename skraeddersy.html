@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skræddersy din egen måltidskasse, ved at vælge retter">
+    <meta name="keywords" content="skræddersy, retter, måltidskasse, custom, customize, filtrering">
+    <title>Skræddersy | Nippon</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navigation__container">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Nippon logo"></a>
+        <nav>
+            <!-- Menu items og dropdown hover fra w3schools-->
+            <div class="menuitems__container">
+                <div class="dropdown">
+                    <a class="overmenu menuitem active_menuitem" href="maaltidskasser.html">Måltidskasser</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="denstudievenlige.html">Den studievenlige</a>
+                            <a href="under_konstruktion.html">Den vegetariske</a>
+                            <a href="under_konstruktion.html">Den veganske</a>
+                            <a href="under_konstruktion.html">Den sunde</a>
+                            <a href="under_konstruktion.html">Den luksus</a>
+                            <a href="under_konstruktion.html">Den børnevenlige</a>
+                            <a href="skraeddersy.html">Skræddersy din egen måltidskasse</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Inspiration</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Spar tid og penge med en madplan</a>
+                            <a href="under_konstruktion.html">Nem aftensmad</a>
+                            <a href="under_konstruktion.html">Sund aftensmad</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Informationer</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Sådan fungerer det</a>
+                            <a href="under_konstruktion.html">Ingredienser</a>
+                            <a href="under_konstruktion.html">Leveringsområde</a>
+                            <a href="under_konstruktion.html">Bæredygtighed</a>
+                            <a href="under_konstruktion.html">Abonnementsordning</a>
+                            <a href="under_konstruktion.html">Leverandører</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Om os</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Vores asiatiske køkken</a>
+                            <a href="under_konstruktion.html">Kontakt os</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="user_cart">
+            <a href="log-in.html"><img class="user" src="img/user.svg" alt="user logo for login"></a>
+            <img class="cart" src="img/cart.svg" alt="cart logo for login" onclick="show()">
+        </div>
+    </header>
+
+    <!-- POPUP KURV -->
+    <div id="popup_kurv">
+        <p>Din vare er blevet tilføjet til kurven:</p>
+        <div>
+            <span class="kryds" onclick="hide()">X</span>
+        </div>
+
+        <p>1x skræddersy måltidskasse</p>
+        <p class="kurv_indskudt">1x Sukiyaki <br> 1x Nudler <br> 1x Soba <br> <br> I alt: <span
+                class="pris">393,-</span></p>
+        <div class="knapper">
+            <button id="button_pop_sort" onclick="window.location.href='index.html'">Shop videre</button>
+            <button id="button_pop" type="submit" onclick="window.location.href='registrering.html'">Til kassen</button>
+        </div>
+    </div>
+    <!-- POPUP KURV SLUT -->
+
+    <div>
+        <a href="maaltidskasser.html" class="tilbage">
+            <img class="pil_venstre" src="img/pil_venstre.svg" alt="pil der peger til venstre">
+            <p> Tilbage til vores måltidskasser</p>
+        </a>
+    </div>
+
+    <section class="hero_2">
+        <h1 class="hero_text_2">Skræddersy din egen måltidskasse</h1>
+    </section>
+
+    <div class="onboarding">
+        <h2>Vælg én ret pr. dag. Vælg mindst 2 retter, og maks 5 retter</h2>
+    </div>
+    <div id="myBtnContainer">
+        <h2>Filtrering:</h2>
+        <button class="btn active" onclick="filterSelection('all')">Vis alle</button>
+        <button class="btn" onclick="filterSelection('veganks')">Vegansk</button>
+        <button class="btn" onclick="filterSelection('vegetarisk')">Vegetarisk</button>
+        <button class="btn" onclick="filterSelection('kylling')">Kylling</button>
+        <button class="btn" onclick="filterSelection('oksekoed')">Oksekød</button>
+        <button class="btn" onclick="filterSelection('svinekoed')">Svinekød</button>
+
+        <h2>Sortering:</h2>
+        <input type="button" value="Pris       v">
+    </div>
+
+    <div class="filterDiv_container">
+        <div class="article_content fill_div filterDiv kylling">
+            <div onclick="openModal()">
+                <img src="img/teriyaki_noodles.jpg" alt="Teriyaki noodles">
+                <div class="article_text">
+                    <p class="box_navn">Nudler med teriyaki </p>
+                    <p>Fra 139,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv vegetarisk">
+            <div onclick="openModal()">
+                <img src="img/bibimbap.jpg" alt="bibimbap med ris og grøntsager">
+                <div class="article_text">
+                    <p class="box_navn">Bibimbap m. ris og grøntsager </p>
+                    <p> Fra 99,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv oksekoed">
+            <div onclick="openModal()">
+                <img src="img/soba.jpg" alt="soba ret">
+                <div class="article_text">
+                    <p class="box_navn">Soba</p>
+                    <p> Fra 125,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv oksekoed">
+            <div onclick="openModal()">
+                <img src="img/sukiyaki.jpg" alt="sukiyaki ret med kød nudler og sauce">
+                <div class="article_text">
+                    <p class="box_navn">Sukiyaki m. kød, nudler og sauce </p>
+                    <p> Fra 129,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv oksekoed">
+            <div onclick="openModal()">
+                <img src="img/sudo.jpg" alt="sudo nudler og grønt">
+                <div class="article_text">
+                    <p class="box_navn">Udon - nudler i suppe med oksekød</p>
+                    <p> Fra 119,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv kylling">
+            <div onclick="openModal()">
+                <img src="img/yakitori.jpg" alt="Yakitori kyllingespyd">
+                <div class="article_text">
+                    <p class="box_navn">Yakitori - kyllingespyd m. Teriyaki sauce</p>
+                    <p> Fra 139,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv vegatar vegansk">
+            <div onclick="openModal()">
+                <img src="img/mochi.jpg" alt="mochi dessert">
+                <div class="article_text">
+                    <p class="box_navn">Mochi - dessert m. ris og frugt</p>
+                    <p> Fra 75,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv kylling">
+            <div onclick="openModal()">
+                <img src="img/soup.jpg" alt="chawanmushi suppe">
+                <div class="article_text">
+                    <p class="box_navn">Chawanmushi</p>
+                    <p> Fra 129,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv oksekoed">
+            <div onclick="openModal()">
+                <img src="img/cabbage.jpg" alt="kålret med oksekød">
+                <div class="article_text">
+                    <p class="box_navn">Kålret med oksekød</p>
+                    <p> Fra 129,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv kylling">
+            <div onclick="openModal()">
+                <img src="img/butter_chicken.jpg" alt="butterchicken ris">
+                <div class="article_text">
+                    <p class="box_navn">Butterchicken</p>
+                    <p> Fra 109,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv svinekoed">
+            <div onclick="openModal()">
+                <img src="img/pho_ga.jpg" alt="pho ga ret suppe">
+                <div class="article_text">
+                    <p class="box_navn">Pho ga</p>
+                    <p> Fra 125,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+
+        <div class="article_content fill_div filterDiv kylling">
+            <div onclick="openModal()">
+                <img src="img/rispapir.jpg" alt="rispapirs ruller med kylling">
+                <div class="article_text">
+                    <p class="box_navn">Rispapirsruller med kylling</p>
+                    <p> Fra 119,00 kr. </p>
+                </div>
+            </div>
+            <input class="checkbox" type="checkbox">
+        </div>
+    </div>
+
+
+    <div class="sticky">
+        <div class="sticky_retter">
+            <img src="img/teriyaki_noodles.jpg" alt="teriyaki nudler i kurven">
+            <img src="img/butter_chicken.jpg" alt="butter chicken i kurven">
+            <img src="img/sudo.jpg" alt="sudo i kurven">
+            <img src="img/sticky_none_hvid.png" alt="billede med kryds, fordi der intet er i kurven">
+            <img src="img/sticky_none_hvid.png" alt="billede med kryds, fordi der intet er i kurven">
+        </div>
+        <div class="sticky_personer">
+            <div class="sticky_personer_overskrift">
+                <p>Vælg antal personer</p>
+            </div>
+            <div class="sticky_personer_checkbox">
+                <input class="checkbox" type="checkbox">
+                <input class="checkbox" type="checkbox">
+                <input class="checkbox" type="checkbox">
+                <input class="checkbox" type="checkbox">
+                <input class="checkbox" type="checkbox">
+            </div>
+        </div>
+        <div class="sticky_checkud">
+            <p class="sticky_total">I alt: 393,-</p>
+            <button class="add_kurv" onclick="show()">
+                <img src="img/cart.svg" alt="kurv ved siden af tilføj til kurv knap"> Tilføj til kurv
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_info">
+            <h4>Adresse</h4>
+            <p>Nipponvej 67</p>
+            <p>8000 Aarhus</p>
+        </div>
+
+        <div class="footer_info">
+            <h4>Kundeservice</h4>
+            <p>+45 73841625</p>
+            <p> Nippon@maaltidskasser.dk</p>
+        </div>
+        <div class="footer_info">
+            <h4>Om virksomheden</h4>
+            <p class="link">Bæredygtighed</p>
+            <p class="link">Nippon Group</p>
+        </div>
+        <div class="some">
+            <a href="https://facebook.com"><img src="img/facebook_logo.png" alt="Facebook logo"></a>
+            <a href="https://instagram.com"><img src="img/instagram_logo.png" alt="Instagram logo"></a>
+        </div>
+    </footer>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <section class="modal-indhold">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h1>Nudler med stegt tofu</h1>
+        <div class="nudler-opskrift">
+            <div class="nudler-img">
+                <iframe width="540" height="300" src="https://www.youtube.com/embed/AHXd0EDhsxE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="info-næring">
+                    <div class="nudler-info">
+                        <h4>Ingredienser pr person:</h4>
+                        <p>200g tofu <br>
+                            2 spsk olie <br>
+                            2 tsk soya <br>
+                            1 tsk honning <br>
+                            1 fed hvidløg <br>
+                            Nudler <br>
+                            Salt <br>
+                            Peber <br>
+                        </p>
+                    </div>
+                    <div class="nudler-næring">
+                        <h4>Næringsindhold pr 100 g</h4>
+                        <p>Kalorier: 380 kcal <br>
+                            Protein: 16 gram <br>
+                            Kulhydrater: 68 gram <br>
+                            Fedt: 6 gram <br>
+                            Fibre: 6 gram <br>
+                            Natrium: 1180 mg</p>
+                    </div>
+                </div>
+                <div class="check-tilføj">
+                    <div class="check-person">
+                        <div class="person_check">
+                            <p>Vælg antal personer</p>
+                        </div>
+                        <div class="input_person_check">
+                            <input type="checkbox">
+                            <input type="checkbox">
+                            <input type="checkbox">
+                            <input type="checkbox">
+                            <input type="checkbox">
+                        </div>
+
+                    </div>
+                    <div class="sticky_checkud">
+                        <p class="sticky_total">I alt: 393,-</p>
+                        <button class="add_kurv" onclick="show(),closeModal()">
+                            <img src="img/cart.svg" alt="billede af en indkøbskurv"> Tilføj til kurv
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="step_by_step">
+                <div class="step_info">
+                    <img src="img/step_1.jpg" alt="en person som koger nudler hen over en vask">
+                    <div>
+                        <h2>Step 1</h2>
+                        <p>Kog nudlerne efter anvisning på pakken. Når de er færdige,
+                            dræner du dem og skyller dem i koldt vand. Hæld dem i en skål
+                            Sæt dem til side.</p>
+                    </div>
+                </div>
+                <div class="step_info">
+                    <img src="img/step_2.jpg" alt="en person som heler olie på sine svampe der ligger i en pande">
+                    <div>
+                        <h2>Step 2</h2>
+                        <p>Varm olien op i en wok eller stor pande over medium varme.
+                            Tilsæt tofuen og bland det med marinaden. Hæld derefter den afkølede tofu i skålen med
+                            nudlerne.
+                        </p>
+                    </div>
+                </div>
+                <div class="step_info">
+                    <img src="img/step_3.jpg" alt="kyllingestrimler der ligger på en pande og steger">
+                    <div>
+                        <h2>Step 3</h2>
+                        <p>Tilsæt forårsløg og retten er klar til servering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

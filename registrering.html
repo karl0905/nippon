@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Indtastning af personoplysninger - adresse osv. ifb. køb">
+    <meta name="keywords" content="Adresse, oplysninger, køb, nummer, mail, bestilling, ordres">
+    <title>Registrering | Nippon</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navigation__container">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Nippon logo"></a>
+        <nav>
+            <!-- Menu items og dropdown hover fra w3schools-->
+            <div class="menuitems__container">
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="maaltidskasser.html">Måltidskasser</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="denstudievenlige.html">Den studievenlige</a>
+                            <a href="under_konstruktion.html">Den vegetariske</a>
+                            <a href="under_konstruktion.html">Den veganske</a>
+                            <a href="under_konstruktion.html">Den sunde</a>
+                            <a href="under_konstruktion.html">Den luksus</a>
+                            <a href="under_konstruktion.html">Den børnevenlige</a>
+                            <a href="skraeddersy.html">Skræddersy din egen måltidskasse</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Inspiration</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Spar tid og penge med en madplan</a>
+                            <a href="under_konstruktion.html">Nem aftensmad</a>
+                            <a href="under_konstruktion.html">Sund aftensmad</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Informationer</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Sådan fungerer det</a>
+                            <a href="under_konstruktion.html">Ingredienser</a>
+                            <a href="under_konstruktion.html">Leveringsområde</a>
+                            <a href="under_konstruktion.html">Bæredygtighed</a>
+                            <a href="under_konstruktion.html">Abonnementsordning</a>
+                            <a href="under_konstruktion.html">Leverandører</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="overmenu menuitem" href="under_konstruktion.html">Om os</a>
+                    <div class="pil">
+                        <img src="img/pil_ned.svg" alt="dropdown pil">
+                        <div class="dropdown_content">
+                            <a href="under_konstruktion.html">Vores asiatiske køkken</a>
+                            <a href="under_konstruktion.html">Kontakt os</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="user_cart">
+            <a href="log-in.html"><img class="user" src="img/user.svg" alt="user logo for login"></a>
+            <img class="cart" src="img/cart.svg" alt="cart logo for login" onclick="show()">
+        </div>
+    </header>
+
+
+    <!--BREDCRUMB-->
+    <div class="bredcrumb">
+        <p class="bredcrumb_farve">Registering</p>
+        <i class="material-icons">arrow_right_alt</i>
+        <p> Betalingsinfo</p>
+        <i class="material-icons">arrow_right_alt</i>
+        <p> Ordrebekræftelse </p>
+    </div>
+
+    <img class="flowet" src="img/progress_bar1.png" alt="processbar for flowet">
+
+    <!--KORT OPLYSNINGER-->
+    <section class="regi-betal">
+        <section class="registering">
+            <div class="registering-info">
+                <div class="navn-efter">
+                    <div class="navn">
+                        <p>Navn</p>
+                        <input type="text">
+                    </div>
+                    <div class="efternavn">
+                        <p>Efternavn</p>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="adresse1-2">
+                    <div class="adresse1">
+                        <p>Adresse</p>
+                        <input type="text">
+                    </div>
+                    <div class="adresse2">
+                        <p>Adresse 2</p>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="mobil-mail-rest">
+                    <div class="mobil-mail">
+                        <div class="mobil">
+                            <p>Mobil</p>
+                            <input type="text">
+                        </div>
+                        <div class="mail">
+                            <p>Mail</p>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="tilmeld">
+                        <div class="eller-log">
+                            <p>Eller</p>
+                            <button onclick="window.location.href='log-in.html'">Log ind</button>
+                        </div>
+                        <div class="tilmeld-ny-abo">
+                            <div class="abo">
+                                <input type="checkbox">
+                                <p>Tilmeld abonnementordning</p>
+                            </div>
+                            <div class="nyhed">
+                                <input type="checkbox">
+                                <p>Tilmeld nyhedsbrev</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="ordre_reg">
+            <h2>Kurv</h2>
+            <div class="ordre_mad">
+                <p>Pho ga</p>
+                <p class="ordre_pris">59,00 kr.</p>
+            </div>
+            <div class="ordre_mad">
+                <p>Asiatisk wok med kylling
+                    og grøntsager </p>
+                <p class="ordre_pris">59,00 kr.</p>
+            </div>
+            <div class="ordre_mad">
+                <p>Asiatisk nudelsalat med
+                    kylling og grøntsager </p>
+                <p class="ordre_pris">69,00 kr.</p>
+            </div>
+            <div class="rabat">
+                <p>Rabatkode</p>
+                <input type="text">
+            </div>
+            <div class="total">
+                <h3>Total</h3>
+                <p>187,00 kr.</p>
+            </div>
+
+            <button onclick="window.location.href='betalingsinfo.html'" class="forsæt">Forsæt til betalling</button>
+
+            <p>vi modtager</p>
+            <div class="betalingsmetode">
+                <img src="img/mastercard.svg" alt="Mastercard billede">
+                <img src="img/visa.svg" alt="Visa kort">
+                <img src="img/paypal.svg" alt="Paypal logo">
+                <img src="img/mobilepay.png" alt="Mobilpay logo">
+                <img src="img/applepay.svg" alt="Appel pay logo">
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_info">
+            <h4>Adresse</h4>
+            <p>Nipponvej 67</p>
+            <p>8000 Aarhus</p>
+        </div>
+
+        <div class="footer_info">
+            <h4>Kundeservice</h4>
+            <p>+45 73841625</p>
+            <p> Nippon@maaltidskasser.dk</p>
+        </div>
+        <div class="footer_info">
+            <h4>Om virksomheden</h4>
+            <p class="link">Bæredygtighed</p>
+            <p class="link">Nippon Group</p>
+        </div>
+        <div class="some">
+            <a href="https://facebook.com"><img src="img/facebook_logo.png" alt="Facebook logo"></a>
+            <a href="https://instagram.com"><img src="img/instagram_logo.png" alt="Instagram logo"></a>
+        </div>
+    </footer>
+
+</body>
